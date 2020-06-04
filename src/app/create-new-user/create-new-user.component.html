@@ -1,0 +1,129 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div >
+        <!-- <div class="box-header with-border">
+          <h3 class="box-title">Title</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+        </div> -->
+        <div class="login-box">
+           
+            <!-- /.login-logo -->
+            <div class="login-box-body">
+                <div class="login-logo" style="font-size:32px">
+                    <a href="../../index2.html"><b>Institution Registration</b></a>
+                  </div>
+              <form (ngSubmit) = "registerInstution()">
+                <div class="form-group has-feedback">
+                        <input name="institutionName" [(ngModel)]="institution.institutionName" type="text" class="form-control" placeholder="Institution Name" required = "required">
+                        <span class="glyphicon glyphicon-education form-control-feedback"></span>
+                </div> 
+                <div class="form-group has-feedback">
+                        <input name="institutionType" [(ngModel)]="institution.institutionType" type="text" class="form-control" placeholder="Institution Type" required = "required">
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                        <input name="email" [(ngModel)]="institution.email" type="email" class="form-control" placeholder="Institution Email" required = "required">
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>   
+                <div class="form-group has-feedback">
+                  <input name="contactNo" [(ngModel)]="institution.contactNo" type="tel" class="form-control" placeholder="Contact Number" required = "required">
+                  <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <input name="address" [(ngModel)]="institution.address" type="text" class="form-control" placeholder="Address" required = "required">
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                        <input name="pincode" [(ngModel)]="institution.pincode" type="number" class="form-control" placeholder="Pincode" required = "required">
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      </div>
+                <div class="form-group has-feedback">
+                    <input name="subcription" [(ngModel)]="institution.subcription" type="number" class="form-control" placeholder="Subscription Period" required = "required">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
+                <div class="form-group has-feedback">
+                        <input name="copName" [(ngModel)]="institution.copName" type="name" class="form-control" placeholder="Contact Person Name" required = "required">
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
+                <div class="form-group has-feedback">
+                        <input name="copPhone" [(ngModel)]="institution.copPhone" type="tel" class="form-control" placeholder="Contact Person Phone" required = "required">
+                        <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                            <input name="maxInstLogin" [(ngModel)]="institution.maxInstLogin" type="number" class="form-control" placeholder="Max No of Institution Id" required = "required">
+                            <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                        </div>
+                    <div class="form-group has-feedback">
+                            <input name="maxStudentLogin" [(ngModel)]="institution.maxStudentLogin" type="number" class="form-control" placeholder="Max No of Student Id" required = "required">
+                            <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                        </div>
+                <div class="form-group">
+                        <label for="institutionLogo">Logo</label>
+                        <input type="file" id="institutionLogo" name = "logo" (change) = "onFileChanged($event)">
+        
+                        <p class="help-block">Attach Institution Logo</p>
+                </div>
+                <div class="row">
+                
+                  <!-- <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                      <label class="">
+                        <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div> Remember Me
+                      </label>
+                    </div>
+                  </div> -->
+                  <!-- /.col -->
+                  <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Submit</button>
+                  </div></div>
+                   
+                  
+                  <div name="message" *ngIf="message">{{message}}</div>
+                  <!-- /.col -->
+                
+              </form>
+          
+              <!-- <div class="social-auth-links text-center">
+                <p>- OR -</p>
+                <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+                  Facebook</a>
+                <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+                  Google+</a>
+              </div> -->
+              <!-- /.social-auth-links -->
+              
+              <!-- <a href="#">I forgot my password</a><br> -->
+            
+              <!-- <a href="register.html" class="text-center">Register a new membership</a> -->
+            </div>
+            <!-- /.login-box-body -->
+          </div>
+            
+
+        <!-- /.box-body -->
+        <!-- <div class="box-footer">
+          Footer
+        </div> -->
+        <!-- /.box-footer-->
+      </div>
+      <!-- /.box -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+
+
+  

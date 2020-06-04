@@ -1,0 +1,53 @@
+<div class="content-wrapper">
+    
+        <section class="content">
+            <div name="message" *ngIf="message">{{message}}</div>
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Responsive Hover Table</h3>
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
+                  <input type="text" name="institutionName" [(ngModel)] = "institutionName" (input) = "search()" class="form-control pull-right" placeholder="Search" />
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <tbody><tr>
+                  <th>Institution Name</th>
+                  <th>Pincode</th>
+                  <th>User Name</th>
+                  <th>Status</th>
+                  <!-- <th>Creation Date</th> -->
+                  <th colspan = "2" class = "text-center">Action</th>
+                </tr>
+                <!-- <tr *ngFor = "let inst of institution | slice:startIndex:endIndex"> -->
+                    <tr *ngFor = "let inst of institution | paginate : {id: 'listing_pagination',
+                    itemsPerPage: 10,
+                currentPage: page,
+              totalItems: totalRecords}">
+                  <td>{{inst.institutionName}}</td>
+                  <td>{{inst.pincode}}</td>
+                  <td>{{inst.username}}</td>
+                  <td>{{inst.status}}</td>
+                  <!-- <td>{{inst</td> -->
+                  <td align="center"><button class = "btn btn-warning" (click)="modifyStatus(inst,false)" [disabled]="!inst.status">Deactivate</button></td>
+                  <td><button class = "btn btn-success" (click)="modifyStatus(inst,true)" [disabled]="inst.status">Activate</button></td>
+                </tr>
+
+              </tbody></table>
+              <div>
+                <pagination-controls id='listing_pagination' maxSize="5" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+              </div>
+
+          </div> 
+          <!-- /.box -->
+        </div>
+        </section>
+    </div>
