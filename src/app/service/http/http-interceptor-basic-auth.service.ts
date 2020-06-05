@@ -18,6 +18,7 @@ export class HttpInterceptorBasicAuthService implements HttpInterceptor{
     let userName = this.basicAuthenticationService.getAuthenticatedUser()
     
     if(basicAuthHeaderString && userName){
+      
       request = request.clone({
         setHeaders : {
           Authorization : basicAuthHeaderString
@@ -25,6 +26,12 @@ export class HttpInterceptorBasicAuthService implements HttpInterceptor{
 
       })
   }
+
+  // else if(request.url==='/login/alleninstitute20'){
+    
+  //   return next.handle(request)
+
+  // }
 
     return next.handle(request)
   }

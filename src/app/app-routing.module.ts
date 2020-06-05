@@ -8,11 +8,13 @@ import { RouteGuardService } from './service/route-guard.service';
 import { LogoutComponent } from './logout/logout.component';
 import { CreateNewUserComponent } from './create-new-user/create-new-user.component';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
+import { InstituteSignInComponent } from './institute-sign-in/institute-sign-in.component';
 
 
 const routes: Routes = [
   {path:'',component:WelcomeComponent},
   {path:'adminLogin',component:SignInComponent},
+  {path:'login/:instituteName',component:InstituteSignInComponent},
   {path:'userLogin',component:UserSignInComponent},
   {path:'register',component:RegisterComponent},
   {path:'logout',component:LogoutComponent, canActivate :[RouteGuardService]},
