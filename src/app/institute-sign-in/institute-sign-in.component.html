@@ -16,7 +16,18 @@
                     <div class="login-logo" style="font-size:32px">
                         <a href="../../index2.html"><b>Sign In </b></a>
                     </div>
-                    <!-- <form (ngSubmit)="handleJwtBasicAuthLogin()">
+
+                    <div class="container row">
+                        <div class="col-md-12">
+                            <div *ngIf=retrievedImage>
+                                <img [src]="retrievedImage">
+                            </div>
+                        </div>
+                      </div>
+
+
+
+                    <form (ngSubmit)="handleJwtBasicAuthLogin()">
                         <div class="form-group has-feedback">
                             <input name="email" [(ngModel)]="email" type="email" class="form-control"
                                 placeholder="Email" required="required">
@@ -35,7 +46,7 @@
                         </div>
                         
 
-                    </form> -->
+                    </form>
 
 
                     <a href="#">I forgot my password</a><br>

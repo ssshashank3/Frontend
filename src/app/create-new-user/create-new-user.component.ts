@@ -14,13 +14,13 @@ export class Institution{
     public subcription : Number,
     public copName : String,
     public copPhone : Number,
-    // public logo : File,
+    public logo : any,
     public username : String ,
     // public defaultPassword : String ,
     // public errorMessage:String,
     public maxInstLogin : Number,
     public maxStudentLogin : Number,
-    public status: boolean ,
+    public status: boolean 
     // public encodedPassword,String
     ){
       
@@ -41,7 +41,7 @@ export class CreateNewUserComponent implements OnInit {
   constructor(private adminService: AdminService) { }
 
   ngOnInit() {
-     this.institution=new Institution(-1,'','','',null,'',null,null,'',null,null,null,null,null);
+     this.institution=new Institution(-1,'','','',null,'',null,null,'',null,null,null,null,null,null);
     //this.institution=new Institution('','',0,'',0,0,'',0);
   }
 

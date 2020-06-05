@@ -23,7 +23,7 @@ export class ModifyUserComponent implements OnInit {
   constructor(private adminService: AdminService) { }
 
   ngOnInit() {
-    this.institution=[new Institution(-1,'','','',null,'',null,null,'',null,null,null,null,null)]
+    this.institution=[new Institution(-1,'','','',null,'',null,null,'',null,null,null,null,null,null)]
     this.fetchAllInstitution();
     
 

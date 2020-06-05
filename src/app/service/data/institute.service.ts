@@ -10,6 +10,6 @@ export class InstituteService {
   constructor(private http: HttpClient) { }
 
   getInstitution(institutionName){
-    return this.http.get<Institution>(`http://localhost:8081/getInstitution/${institutionName}`);
+    return this.http.get<Institution>(`http://localhost:8081/getInstitution/${institutionName}` );
   }
 }
