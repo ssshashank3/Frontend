@@ -16,7 +16,8 @@ import { HttpInterceptorBasicAuthService } from './service/http/http-interceptor
 import { LogoutComponent } from './logout/logout.component';
 import { CreateNewUserComponent } from './create-new-user/create-new-user.component';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
-import { NgxPaginationModule } from 'ngx-pagination'
+import { NgxPaginationModule } from 'ngx-pagination';
+import { InstituteSignInComponent } from './institute-sign-in/institute-sign-in.component'
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { NgxPaginationModule } from 'ngx-pagination'
     LogoutComponent,
     UserSignInComponent,
     CreateNewUserComponent,
-    ModifyUserComponent
+    ModifyUserComponent,
+    InstituteSignInComponent
   ],
   imports: [
     BrowserModule,
