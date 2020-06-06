@@ -9,7 +9,8 @@ import { InstituteService } from '../service/data/institute.service';
   styleUrls: ['./institute-sign-in.component.css']
 })
 export class InstituteSignInComponent implements OnInit {
-  instituteName: string='alleninstitute20';
+  instituteName: string;
+  fetchedInstituteName : String;
   email: string;
   password: string;
   invalidLogin: boolean;
@@ -39,38 +40,33 @@ export class InstituteSignInComponent implements OnInit {
    
     this.instituteService.getInstitution(instituteName).subscribe(
       data => {
-        console.log(data.logo)
+        
         this.retrieveResonse = data.logo;
         this.base64Data = this.retrieveResonse.picByte;
         this.retrievedImage = 'data:image/jpeg;base64,' + data.logo;
-
+        this.fetchedInstituteName = data.institutionName;
         this.basicAuthenticationService.logout();
-        // this.router.navigate(['welcome'])
-        // this.invalidLogin = false
+        
       },
       error => {
         console.log(error)
-        // this.invalidLogin = true
+        
       }
 
     )    
-    // this.basicAuthenticationService.logout();
+    
   }
 
   handleJwtAuthLogin(name,pwd) {
-    // alert(name + " " + pwd);
+    
     this.basicAuthenticationService.executeJwtAuthenticationBeanService(name, pwd)
       .subscribe(
         data => {
-          // console.log(data)
-          this.getInstitution(this.instituteName)
           
-          // this.router.navigate(['welcome'])
-          // this.invalidLogin = false
+          this.getInstitution(this.instituteName)
         },
         error => {
           console.log(error)
-          // this.invalidLogin = true
         }
       )
 
@@ -83,7 +79,7 @@ export class InstituteSignInComponent implements OnInit {
     this.basicAuthenticationService.executeJwtAuthenticationBeanService(this.email, this.password)
       .subscribe(
         data => {
-          console.log(data)
+          //console.log(data)
           this.router.navigate(['welcome'])
           this.invalidLogin = false
         },

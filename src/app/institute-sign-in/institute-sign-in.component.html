@@ -5,25 +5,30 @@
 
     
     <section class="content">
-
+        
         
         <div>
 
             <div class="login-box">
-
+                    
+                        <div class="login-logo" *ngIf=retrievedImage style="font-size:32px">
+                            <a href="../../index2.html"><b>{{fetchedInstituteName}}</b></a>
+                        </div>
+                   
+                <!-- <div class="container row"> -->
+                    <div class="login-logo">
+                        <div *ngIf=retrievedImage>
+                            <img style="width:100px;height:100px;" [src]="retrievedImage">
+                        </div>
+                    </div>
+                  <!-- </div> -->
                 
                 <div class="login-box-body">
                     <div class="login-logo" style="font-size:32px">
                         <a href="../../index2.html"><b>Sign In </b></a>
                     </div>
 
-                    <div class="container row">
-                        <div class="col-md-12">
-                            <div *ngIf=retrievedImage>
-                                <img [src]="retrievedImage">
-                            </div>
-                        </div>
-                      </div>
+                    
 
 
 
