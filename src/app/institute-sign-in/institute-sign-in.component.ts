@@ -36,7 +36,6 @@ export class InstituteSignInComponent implements OnInit {
   }
 
   getInstitution(instituteName) {
-    console.log("12345")
    
     this.instituteService.getInstitution(instituteName).subscribe(
       data => {
@@ -79,7 +78,7 @@ export class InstituteSignInComponent implements OnInit {
     this.basicAuthenticationService.executeJwtAuthenticationBeanService(this.email, this.password)
       .subscribe(
         data => {
-          //console.log(data)
+          console.log('hgfh '+ data)
           this.router.navigate(['welcome'])
           this.invalidLogin = false
         },
