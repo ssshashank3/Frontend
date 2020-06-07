@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div >
+        <div class="login-box">
+           
+            <!-- /.login-logo -->
+            <div class="login-box-body">
+                <div class="login-logo" style="font-size:32px">
+                    <a href="../../index2.html"><b>Student Registration</b></a>
+                  </div>
+              <form (ngSubmit) = "registerInstution()">
+                <div class="form-group has-feedback">
+                        <input name="studentName" [(ngModel)]="student.studentName" type="text" class="form-control" placeholder="Student Name" required = "required">
+                        <span class="glyphicon glyphicon-education form-control-feedback"></span>
+                </div> 
+                <div class="form-group has-feedback">
+                        <input name="contactNo" [(ngModel)]="student.contactNo" type="number" class="form-control" placeholder="Mobile No" required = "required">
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                        <input name="email" [(ngModel)]="student.email" type="email" class="form-control" placeholder="Student Email" required = "required">
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>   
+                <div class="form-group has-feedback">
+                  <input name="optedCourse" [(ngModel)]="student.optedCourse" type="text" class="form-control" placeholder="Course" required = "required">
+                  <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <input name="address" [(ngModel)]="student.address" type="text" class="form-control" placeholder="Address" required = "required">
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                        <input name="pincode" [(ngModel)]="student.pincode" type="number" class="form-control" placeholder="Pincode" required = "required">
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      </div>
+                <div class="form-group has-feedback">
+                    <input name="subcription" [(ngModel)]="student.subcription" type="number" class="form-control" placeholder="Subscription Period" required = "required">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
+                <div class="form-group has-feedback">
+                        <input name="dateOfBirth" [(ngModel)]="student.dateOfBirth" type="date" class="form-control" placeholder="Date Of Birth" required = "required">
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    </div>
+
+                <div class="row">
+                  <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Submit</button>
+                  </div></div>
+                   
+                  
+                  <div name="message" *ngIf="message">{{message}}</div>
+                  <!-- /.col -->
+                
+              </form>
+            </div>
+            <!-- /.login-box-body -->
+          </div>
+        <!-- /.box-footer-->
+      </div>
+      <!-- /.box -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+
+
+  

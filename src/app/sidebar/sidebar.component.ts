@@ -8,6 +8,7 @@ import { BasicAuthenticationService } from '../service/basic-authentication.serv
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  
 
   constructor(private router : Router,
     public basicAuthenticationService : BasicAuthenticationService) { }

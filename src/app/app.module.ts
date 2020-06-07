@@ -17,7 +17,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { CreateNewUserComponent } from './create-new-user/create-new-user.component';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { InstituteSignInComponent } from './institute-sign-in/institute-sign-in.component'
+import { InstituteSignInComponent } from './institute-sign-in/institute-sign-in.component';
+import { StudentRegistrationComponent } from './student-registration/student-registration.component';
+import { ModifyStudentComponent } from './modify-student/modify-student.component'
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { InstituteSignInComponent } from './institute-sign-in/institute-sign-in.
     UserSignInComponent,
     CreateNewUserComponent,
     ModifyUserComponent,
-    InstituteSignInComponent
+    InstituteSignInComponent,
+    StudentRegistrationComponent,
+    ModifyStudentComponent
   ],
   imports: [
     BrowserModule,

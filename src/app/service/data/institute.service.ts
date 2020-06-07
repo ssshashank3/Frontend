@@ -12,4 +12,8 @@ export class InstituteService {
   getInstitution(institutionName){
     return this.http.get<Institution>(`http://localhost:8081/getInstitution/${institutionName}` );
   }
+
+  registerStudent(studentData){
+    return this.http.post(`http://localhost:8081/registerStudent`,studentData);
+  }
 }

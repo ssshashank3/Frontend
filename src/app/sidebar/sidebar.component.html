@@ -15,7 +15,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview" *ngIf="basicAuthenticationService.isUserLoggedIn()">
+        <li class="treeview" *ngIf="basicAuthenticationService.isUserLoggedIn() && basicAuthenticationService.getAccessFlagA()">
           <a routerLink = "/admin/createNewUser">
             <i class="fa fa-sign-in"></i> <span>Create New User</span>
             <span class="pull-right-container">
@@ -23,7 +23,7 @@
             </span>
           </a>
         </li>
-          <li class="treeview" *ngIf="basicAuthenticationService.isUserLoggedIn()">
+          <li class="treeview" *ngIf="basicAuthenticationService.isUserLoggedIn() && basicAuthenticationService.getAccessFlagA()">
           <a routerLink = "/admin/modifyUser">
             <i class="fa fa-sign-in"></i> <span>Modify Existing User</span>
             <span class="pull-right-container">
@@ -31,6 +31,26 @@
             </span>
           </a>
         </li>
+
+        <!-------institution------------->
+        <li class="treeview" *ngIf="basicAuthenticationService.isUserLoggedIn() && basicAuthenticationService.getAccessFlagI()">
+          <a routerLink = "/registerStudent">
+            <i class="fa fa-sign-in"></i> <span>Student Registration</span>
+            <span class="pull-right-container">
+              <!-- <i class="fa fa-angle-left pull-right"></i> -->
+            </span>
+          </a>
+        </li>
+          <li class="treeview" *ngIf="basicAuthenticationService.isUserLoggedIn() && basicAuthenticationService.getAccessFlagI()">
+          <a routerLink = "modifyStudent">
+            <i class="fa fa-sign-in"></i> <span>Modify Existing Student</span>
+            <span class="pull-right-container">
+              <!-- <i class="fa fa-angle-left pull-right"></i> -->
+            </span>
+          </a>
+        </li>
+
+<!------------------------------------------------------------------------>        
         <li class="treeview" *ngIf="basicAuthenticationService.isUserLoggedIn()">
           <a routerLink = "/logout">
             <i class="fa fa-sign-in"></i> <span>Sign Out</span>

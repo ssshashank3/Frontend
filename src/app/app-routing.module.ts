@@ -9,6 +9,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { CreateNewUserComponent } from './create-new-user/create-new-user.component';
 import { ModifyUserComponent } from './modify-user/modify-user.component';
 import { InstituteSignInComponent } from './institute-sign-in/institute-sign-in.component';
+import { ModifyStudentComponent } from './modify-student/modify-student.component';
+import { StudentRegistrationComponent } from './student-registration/student-registration.component';
 
 
 const routes: Routes = [
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path:'logout',component:LogoutComponent, canActivate :[RouteGuardService]},
   {path:'admin/createNewUser',component:CreateNewUserComponent, canActivate :[RouteGuardService]},
   {path:'admin/modifyUser',component:ModifyUserComponent, canActivate :[RouteGuardService]},
+  {path:'registerStudent',component:StudentRegistrationComponent, canActivate :[RouteGuardService]},
+  {path:'modifyStudent',component:ModifyStudentComponent, canActivate :[RouteGuardService]},
   {path:'welcome' ,component: WelcomeComponent}
 ];
 
